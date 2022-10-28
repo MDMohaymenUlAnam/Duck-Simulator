@@ -18,3 +18,4 @@ public class CountingDuckFactory extends AbstractDuckFactory {
         return new QuackCounter(new RubberDuck());
     }
 }
+
