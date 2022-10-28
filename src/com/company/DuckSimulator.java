@@ -48,7 +48,8 @@ public class DuckSimulator {
 
         System.out.println("The ducks quacked " +
                 QuackCounter.getQuacks() + " times");
-        System.out.println("step 5 completed");
+        System.out.println("step 6 completed");
+        System.out.println("The simulator is ready to go");
     }
 
     void simulate(Quackable duck) {
