@@ -16,7 +16,7 @@ public class DuckSimulator {
         Quackable gooseDuck = new GooseAdapter(new Goose());
 
         System.out.println("\nDuck Simulator: with abstract factory");
-//        System.out.println("\nstep 3 completed");
+        System.out.println("\nstep 4 completed");
 
         simulate(mallardDuck);
         simulate(redheadDuck);
