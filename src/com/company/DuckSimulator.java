@@ -43,16 +43,9 @@ public class DuckSimulator {
 
 
 
-
-
-//        simulate(mallardDuck);
-//        simulate(redheadDuck);
-//        simulate(duckCall);
-//        simulate(rubberDuck);
-//        simulate(gooseDuck);
-
         System.out.println("The ducks quacked " +
                 QuackCounter.getQuacks() + " times");
+        System.out.println("step 5 completed");
     }
 
     void simulate(Quackable duck) {
