@@ -1,11 +1,13 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Observable implements QuackObservable {
-    ArrayList observers = new ArrayList();
+    List<Observer> observers = new ArrayList<Observer>();
     QuackObservable duck;
+
     public Observable(QuackObservable duck) {
         this.duck = duck;
     }
@@ -15,10 +17,14 @@ public class Observable implements QuackObservable {
     }
 
     public void notifyObservers() {
-        Iterator iterator = observers.iterator();
+        Iterator<Observer> iterator = observers.iterator();
         while (iterator.hasNext()) {
-            Observer observer = (Observer)iterator.next();
+            Observer observer = iterator.next();
             observer.update(duck);
         }
+    }
+
+    public Iterator<Observer> getObservers() {
+        return observers.iterator();
     }
 }

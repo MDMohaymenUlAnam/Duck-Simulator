@@ -1,18 +1,33 @@
 package com.company;
-
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.*;
 
 public class Flock implements Quackable {
-    ArrayList quackers = new ArrayList();
-    public void add(Quackable quacker) {
-        quackers.add(quacker);
+    List<Quackable> ducks = new ArrayList<Quackable>();
+
+    public void add(Quackable duck) {
+        ducks.add(duck);
     }
+
     public void quack() {
-        Iterator iterator = quackers.iterator();
+        Iterator<Quackable> iterator = ducks.iterator();
         while (iterator.hasNext()) {
-            Quackable quacker = (Quackable)iterator.next();
-            quacker.quack();
+            Quackable duck = (Quackable)iterator.next();
+            duck.quack();
         }
+    }
+
+    public void registerObserver(Observer observer) {
+        Iterator<Quackable> iterator = ducks.iterator();
+        while (iterator.hasNext()) {
+            Quackable duck = (Quackable)iterator.next();
+            duck.registerObserver(observer);
+        }
+    }
+
+    public void notifyObservers() { }
+
+    public String toString() {
+        return "Flock of Ducks";
     }
 }
