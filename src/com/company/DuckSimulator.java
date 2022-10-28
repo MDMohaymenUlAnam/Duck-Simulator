@@ -14,7 +14,7 @@ public class DuckSimulator {
         Quackable gooseDuck = new GooseAdapter(new Goose());
 
         System.out.println("\nDuck Simulator: with Goose Adapter");
-        System.out.println("\nstep 1 completed");
+        System.out.println("\nstep 2 completed");
 
         simulate(mallardDuck);
         simulate(redheadDuck);
