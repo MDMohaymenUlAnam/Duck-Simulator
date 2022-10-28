@@ -7,13 +7,13 @@ public class DuckSimulator {
     }
 
     void simulate() {
-        Quackable mallardDuck = new MallardDuck();
-        Quackable redheadDuck = new RedHeadDuck();
-        Quackable duckCall = new DuckCall();
-        Quackable rubberDuck = new RubberDuck();
+        Quackable mallardDuck = new QuackCounter(new MallardDuck());
+        Quackable redheadDuck = new QuackCounter(new RedHeadDuck());
+        Quackable duckCall = new QuackCounter(new DuckCall());
+        Quackable rubberDuck = new QuackCounter(new RubberDuck());
         Quackable gooseDuck = new GooseAdapter(new Goose());
 
-        System.out.println("\nDuck Simulator: with Goose Adapter");
+        System.out.println("\nDuck Simulator: with Decorator");
         System.out.println("\nstep 2 completed");
 
         simulate(mallardDuck);
