@@ -12,6 +12,8 @@ public class DuckSimulator {
         Quackable duckCall = new DuckCall();
         Quackable rubberDuck = new RubberDuck();
         System.out.println("\nDuck Simulator");
+        System.out.println("\nstep 1 completed");
+
         simulate(mallardDuck);
         simulate(redheadDuck);
         simulate(duckCall);
