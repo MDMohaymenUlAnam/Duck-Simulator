@@ -1,0 +1,1 @@
+#Duck-Simulator is a design pattern lab project. Here i have built a duck simulator using multiple patterns taught in the course. The patterns used here are- Factory,Observer,Composite,Adapter,Decorator,Iterator
